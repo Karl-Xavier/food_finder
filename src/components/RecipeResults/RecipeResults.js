@@ -12,7 +12,7 @@ const RecipeResults = ({ data }) => {
         <div className="row">
             {data.results.map((recipe) => {
                 return( 
-                        <div key={recipe.id} className="col-lg-4 col-md-2 col-sm-6 text-center">
+                        <div key={recipe.id} className="col-lg-4 col-md-6 col-sm-6 text-center">
                             <img className="img-fluid rounded" src={recipe.image} alt={recipe.title}/>
                             <h2>{recipe.title}</h2>
                         </div>

@@ -11,16 +11,22 @@ const SearchBar = (props) => {
         const apiURL = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&query=${query}`;
         try {
             const response = await fetch(apiURL, {
+
                 method: "GET",
                 headers: {
                     "Content-Type": 'application/json'
                 },
+
             });
+
             const data = await response.json();
+
             props.onSearch(data)
-            console.log(data);
+
         } catch (error) {
+
             console.log("Error Fetching Data...", error);
+            
         }
 
     };
